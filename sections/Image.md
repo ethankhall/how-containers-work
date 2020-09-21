@@ -166,7 +166,7 @@ When creating the "filesystem" for the container, docker goes through the `Layer
 
 A UnionFS is used because it prevents Docker from having to make a full copy of the container every time one is started. Instead a layer is extracted onto disk once, and then using a UnionFS to make the  two layers look like on thing. When the union is created, there are three parameters, the "lower", "upper", and "work" parts of the union. The "lower" is the previous layer, the "upper" is the current layer, the "work" of the overlap of the two.
 
-![[UnionFS.png]]
+![UnionFS.png](../images/UnionFS.png)
 
 The diagram above demonstraights how the you would "chain" UnionFS together to build a fill filesystem. When a container starts, it get's it's own link in the chain, making it possible for two containers to be running at once, using the same image on disk, but see different views of the world.
 
@@ -180,7 +180,7 @@ Useful References:
 
 Before getting into the details of how the config file works, we need to first look at the exploded image. The chechsum's have been truncated for previty, and the `VERSION` file removed because it's not important.
 
-```
+```bash
 Hash                      Path
 ----                      ----
 BB0EAF4EEE00C28C...       bb0eaf4eee00c....json

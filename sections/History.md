@@ -1,17 +1,20 @@
 # History of Deploying Software
-In modern history, there are three common ways to deploy software: [[Bare Metal History]], [[Virtual Machine History]], and [[Container History]]
+
+In modern history, there are three common ways to deploy software: [Bare Metal History](../detailed-history/Bare_Metal_History.md), [Virtual Machine History](../detailed-history/Virtual_Machine_History.md), and [Container History](../detailed-history/Container_History.md)
 
 To see the specifics of the different technologies, review the linked pages.
 
 ## Comparison
-![[Deployment.png]]
+
+![Deployment.png](../images/Deployment.png)
 
 To be able to describe deployment, we have an example where we want to deploy the same application twice. The applications use the exact same memory and CPU at all times, but need to have their own copy on disk.
 
 These requirements/restrictions are a bit contrived, but let us make some interesting comparisons.
 
 ### CPU
-![[CPU.png]]
+
+![CPU.png](../images/CPU.png)
 From the image above, we can see the high level differences between Bare Metal, VM's and Containers. Smaller is better.
 
 In terms of CPU usage, Bare Metal deployments are the obvious winner. They just have less running.
@@ -23,7 +26,8 @@ The VM you can see has the worst because it has a hypervisor and two coppies of 
 In the middle are containers. You see there is a small "docker" layer, but it's much smaller than an full OS.
 
 ### Memory Usage
-![[Memory.png]]
+
+![Memory.png](../images/Memory.png)
 
 Memory is simmilar to CPU. The Bare Metal host is best, and VM's are the worst.
 
@@ -34,14 +38,16 @@ Docker has some overhead, but not as much as the VM. Something to reconize, ther
 *Note:* We are skipping over some of the finer points of memory usage to make the comparison easier. There are fancy ways to make it better, but those are often proprietary and expensive.
 
 ### Disk Usage
-![[Disk.png]]
+
+![Disk.png](../images/Disk.png)
 
 The disk usage is different than CPU and Memory. Docker does better than Bare Metal. This is due to "Layers" where the same file can exist in different docker containers but only physically apear on disk once.
 
 Something else to point out is the OS layer on the diagram for Docker is smaller, this is because much less gets installed onto the host by default and they all live inside the application.
 
 ### Security
-![[Security.png]]
+
+![Security.png](../images/Security.png)
 
 Security is interesting. Looking at the graph above, the circles are "rings" of protection. Anything inside one ring can effect anything else.
 
