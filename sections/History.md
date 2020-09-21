@@ -15,6 +15,7 @@ These requirements/restrictions are a bit contrived, but let us make some intere
 ### CPU
 
 ![CPU.png](../images/CPU.png)
+
 From the image above, we can see the high level differences between Bare Metal, VM's and Containers. Smaller is better.
 
 In terms of CPU usage, Bare Metal deployments are the obvious winner. They just have less running.
