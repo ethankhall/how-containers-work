@@ -1,4 +1,4 @@
-# What is `Docker`?
+# What is `Docker`
 
 Docker is made of two things a runtime and an application distribution system.
 
