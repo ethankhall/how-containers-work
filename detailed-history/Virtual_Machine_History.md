@@ -35,5 +35,6 @@ Hypervisors create a new security ring (-1) they use to isolate other VMs from e
 
 The hypervisor is able to isolate the VM's from each other. This makes the security 
 better than bare metal.
-[1]: https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313
-[2]: https://www.digitalocean.com/community/tutorials/what-is-immutable-infrastructure
+
+  [1]: https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313
+  [2]: https://www.digitalocean.com/community/tutorials/what-is-immutable-infrastructure
